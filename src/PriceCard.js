@@ -8,7 +8,7 @@ class PriceCard extends React.Component {
             selected: this.props.selected
         }
     }
-    
+
     handleChange = (isSelected) => {
         this.setState({selected: isSelected}, () => {
             if(this.props.onSelectPrice && typeof(this.props.onSelectPrice) === "function"){
@@ -36,11 +36,11 @@ class PriceCard extends React.Component {
                     {this.props.showMoreInfoButton && this.props.customMoreInfoButtonComponent}
                     <div className="d-flex flex-row align-items-center spec">
                         {this.props.showAccommodationInfo &&
-                            <>
+                            <div>
                                 {this.props.nightCount && <span className="text-muted">{this.props.showMoonIcon && <i className={`${this.props.moonIcon}`} />} {this.props.nightCount}</span>}
                                 {this.props.adultCount && <span className="text-muted">{this.props.showAdultIcon && <i className={`${this.props.adultIcon}`} />} {this.props.adultCount}</span>}
                                 {this.props.childCount && <span className="text-muted">{this.props.showChildIcon && <i className={`${this.props.childIcon}`} />} {this.props.childCount}</span>}
-                            </>
+                            </div>
                         }
                         <span className="text-primary font-weight-bold">{this.props.price}</span>
                         <div className="form-check ml-2">

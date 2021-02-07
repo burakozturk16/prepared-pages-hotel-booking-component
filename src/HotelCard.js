@@ -15,7 +15,7 @@ class HotelCard extends React.Component {
 
     render(){
         return(
-            <>
+            <div>
                 {this.props.showHeader && this.props.hotelName &&
                     <div className="p-1 px-3" style={{...this.props.headerStyle}}>
                         <div className="d-flex flex-row align-items-center">
@@ -56,7 +56,7 @@ class HotelCard extends React.Component {
                     {!this.props.rooms && this.props.children}
                 </div>
                 {this.props.showFooter &&
-                    <>
+                    <div>
                         {this.props.showDates &&
                         <div className="bg-white p-2 px-3 border-bottom">
                             <div className="row">
@@ -121,9 +121,9 @@ class HotelCard extends React.Component {
                                 }
                             </div>
                         </div>
-                    </>
+                    </div>
                 }
-            </>
+            </div>
         )
     }
 }

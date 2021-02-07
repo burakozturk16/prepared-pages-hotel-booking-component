@@ -1,3 +1,7 @@
-export {default as HotelCard} from './HotelCard';
-export {default as RoomCard} from './RoomCard';
-export {default as PriceCard} from './PriceCard';
+import HotelCard from "./HotelCard";
+import RoomCard from "./RoomCard";
+import PriceCard from "./PriceCard";
+
+export {
+    HotelCard, RoomCard, PriceCard
+};
