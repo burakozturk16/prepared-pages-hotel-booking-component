@@ -8,31 +8,7 @@ class PriceCard extends React.Component {
             selected: this.props.selected
         }
     }
-
-    static defaultProps = {
-        hotelId: null,
-        roomId: null,
-        id: null,
-        price: null,
-        showAccommodationInfo: true,
-        selected: false,
-        nightCount: null,
-        moonIcon: "fa fa-moon-o",
-        adultCount: null,
-        adultIcon: "fa fa-user",
-        childCount: null,
-        childIcon: "fa fa-child",
-        showMoonIcon: true,
-        showAdultIcon: true,
-        showChildIcon: true,
-        features: null,
-        showMoreInfoButton: true,
-        moreInfoButtonTitle: null,
-        customMoreInfoButtonComponent: null,
-        onClickPriceMoreInfo: null,
-        onSelectPrice: null
-    }
-
+    
     handleChange = (isSelected) => {
         this.setState({selected: isSelected}, () => {
             if(this.props.onSelectPrice && typeof(this.props.onSelectPrice) === "function"){
@@ -76,5 +52,29 @@ class PriceCard extends React.Component {
         )
     }
 }
+
+PriceCard.defaultProps = {
+    hotelId: null,
+    roomId: null,
+    id: null,
+    price: null,
+    showAccommodationInfo: true,
+    selected: false,
+    nightCount: null,
+    moonIcon: "fa fa-moon-o",
+    adultCount: null,
+    adultIcon: "fa fa-user",
+    childCount: null,
+    childIcon: "fa fa-child",
+    showMoonIcon: true,
+    showAdultIcon: true,
+    showChildIcon: true,
+    features: null,
+    showMoreInfoButton: true,
+    moreInfoButtonTitle: null,
+    customMoreInfoButtonComponent: null,
+    onClickPriceMoreInfo: null,
+    onSelectPrice: null
+};
 
 export default PriceCard;
