@@ -1,7 +1,7 @@
 {
   "name": "prepared-pages-hotel-booking-component",
-  "version": "0.1.3",
-  "main": "dist/index.js",
+  "version": "0.1.8",
+  "main": "src/index.js",
   "publishConfig": {
     "access": "public"
   },
@@ -21,6 +21,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.24.1",
@@ -34,7 +35,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "webpack"
+    "dist": "webpack"
   },
   "eslintConfig": {
     "extends": [

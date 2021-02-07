@@ -116,7 +116,7 @@ The Hotel Booking Page Component has 3 components which are you can use separate
 ## Basic Sample
 
 ```js
-import HotelCard from 'prepared-pages-hotel-booking-component';
+import {HotelCard} from "prepared-pages-hotel-booking-component/dist"
 
 const rooms = [
     {
@@ -235,7 +235,7 @@ The following declarative structure creates features of a room. There two proper
 and ``title``
 
 ```js
-import RoomCard from 'prepared-pages-hotel-booking-component';
+import {RoomCard} from 'prepared-pages-hotel-booking-component/dist';
 
 const features = [
     {icon: "fa fa-bed", title: "King Bed"},
@@ -258,7 +258,7 @@ class MyComponent extends Component {
 The following declarative structure creates features of a price card. There three properties the object needs such as ``icon``, ``title`` and `bold`
 
 ```js
-import PriceCard from 'prepared-pages-hotel-booking-component';
+import {PriceCard} from 'prepared-pages-hotel-booking-component/dist';
 
 const features = [
     {icon: "fa fa-info-circle", title: "Non Refundable", bold: false},
