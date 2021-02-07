@@ -6,18 +6,6 @@ class RoomCard extends React.Component {
         super(props);
     }
 
-    static defaultProps = {
-        id: null,
-        photo: null,
-        title: null,
-        features: null,
-        extraInfoComponent: null,
-        prices: null,
-        onClickRoomImage: null,
-        onSelectPrice: null,
-        onClickPriceMoreInfo: null
-    }
-
     render(){
         return(
             <div className="roomCard">
@@ -70,6 +58,18 @@ class RoomCard extends React.Component {
             </div>
         )
     }
+}
+
+RoomCard.defaultProps = {
+    id: null,
+    photo: null,
+    title: null,
+    features: null,
+    extraInfoComponent: null,
+    prices: null,
+    onClickRoomImage: null,
+    onSelectPrice: null,
+    onClickPriceMoreInfo: null
 }
 
 export default RoomCard;
