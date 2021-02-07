@@ -13,43 +13,6 @@ class HotelCard extends React.Component {
         }
     }
 
-    static defaultProps = {
-        id: null,
-        showHeader: true,
-        headerStyle: null,
-        hotelName: null,
-        showStars: true,
-        stars: 0,
-        subTitle: null,
-        headerRightView: null,
-        backgroundColor: '#eee',
-        rooms: null,
-        showFooter: true,
-        showDates: true,
-        checkInLabel: "Check-In",
-        checkOutLabel: "Check-Out",
-        checkInDate: null,
-        checkOutDate: null,
-        showNightsBetweenDates: true,
-        showDatesButton: true,
-        datesButtonTitle: null,
-        customDatesButtonComponent: null,
-        showFooterInfo: true,
-        footerInfoTitle: null,
-        footerInfoSubtitle: null,
-        customFooterInfoComponent: null,
-        showFooterButton: true,
-        footerButtonTitle: null,
-        customFooterButton: null,
-        onSelectPrice: null,
-        onClickRoomImage: null,
-        onClickPriceMoreInfo: null,
-        onDatesButtonClick: null,
-        onClickFooterButton: null,
-        monthNames : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-        dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    }
-
     render(){
         return(
             <>
@@ -164,5 +127,42 @@ class HotelCard extends React.Component {
         )
     }
 }
+
+HotelCard.defaultProps = {
+    id: null,
+    showHeader: true,
+    headerStyle: null,
+    hotelName: null,
+    showStars: true,
+    stars: 0,
+    subTitle: null,
+    headerRightView: null,
+    backgroundColor: '#eee',
+    rooms: null,
+    showFooter: true,
+    showDates: true,
+    checkInLabel: "Check-In",
+    checkOutLabel: "Check-Out",
+    checkInDate: null,
+    checkOutDate: null,
+    showNightsBetweenDates: true,
+    showDatesButton: true,
+    datesButtonTitle: null,
+    customDatesButtonComponent: null,
+    showFooterInfo: true,
+    footerInfoTitle: null,
+    footerInfoSubtitle: null,
+    customFooterInfoComponent: null,
+    showFooterButton: true,
+    footerButtonTitle: null,
+    customFooterButton: null,
+    onSelectPrice: null,
+    onClickRoomImage: null,
+    onClickPriceMoreInfo: null,
+    onDatesButtonClick: null,
+    onClickFooterButton: null,
+    monthNames : ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    dayNames: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+};
 
 export default HotelCard;
