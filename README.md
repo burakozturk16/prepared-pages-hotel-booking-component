@@ -1,70 +1,277 @@
-# Getting Started with Create React App
+# React Hotel Booking Component
+I decided to create some prepared pages for react apps like
+- Hotel Booking Page (You are here)
+- Login Page
+- User Profile Page
+- etc.
+  
+[![npm (scoped)](https://img.shields.io/npm/v/prepared-pages-hotel-booking-component.svg)](https://www.npmjs.com/package/prepared-pages-hotel-booking-component)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The main name is **React Prepared Pages Set** of this component series, so that's why the package names starts with prepared-pages.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+```sh
+npm install --save prepared-pages-hotel-booking-component
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Contributing
+Feel free to make a PR :) They are always welcome
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Structure
+The Hotel Booking Page Component has 3 components which are you can use separately.
 
-### `yarn test`
+- ``HotelCard`` 
+- ``RoomCard``
+- ``PriceCard``
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Props of HotelCard
+| Name               | Default     | Description
+| ----------------   | ----------- | ------------------------------------------------------------------------------------------------------------
+| id                 |             | User specific key 
+| showHeader         | `true`      |                  
+| headerStyle        |             |                  
+| hotelName          |             |                  
+| showStars          | `true`      |                  
+| stars              | `0`         |                  
+| subTitle           |             |
+| headerRightView    |             | Component
+| backgroundColor    |             |
+| rooms              |             | You can use as array or Nested Component
+| showFooter         | `true`      |
+| showDates          | `true`      |  
+| checkInLabel       | `Check-In`  |
+| checkOutLabel      | `Check-Out` |
+| checkInDate        | `new Date()`|
+| checkOutDate       | `new Date()`|
+| showNightsBetweenDates | `true`  |
+| showDatesButton    | `true`      |
+| datesButtonTitle   |             |
+| customDatesButtonComponent |     | Component
+| showFooterInfo     | `true`      | 
+| footerInfoTitle    |             |
+| footerInfoSubtitle |             |
+| customFooterInfoComponent |      | Component
+| showFooterButton  | `true`       |
+| footerButtonTitle |              |
+| customFooterButton |             | Component  
+| monthNames        | `array`      |
+| dayNames          | `array`      |
 
-### `yarn build`
+## Props of RoomCard
+| Name               | Default     | Description
+| ----------------   | ----------- | ------------------------------------------------------------------------------------------------------------
+| hotelId            |             | User specific key
+| roomId             |             | User specific key
+| id                 |             | User specific key
+| photo              |             |
+| title              |             |
+| features           | `array`     |
+| extraInfoComponent |             | Component
+| prices             |             | You can use as array or Nested Component
+| photo              |             |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Props of PriceCard
+| Name               | Default     | Description
+| ----------------   | ----------- | ------------------------------------------------------------------------------------------------------------
+| hotelId            |             | User specific key
+| roomId             |             | User specific key
+| id                 |             | User specific key
+| price              |             |
+| showAccommodationInfo| `true`    |
+| selected           | `false`     |
+| nightCount         |             | Component
+| moonIcon           | `fa fa-moon-o`| 
+| adultCount         |             |
+| adultIcon          | `fa fa-user`|
+| childCount         |             |
+| childIcon          | `fa fa-child`|
+| showMoonIcon       | `true`    |
+| showAdultIcon      | `true`    |
+| showChildIcon      | `true`    |
+| features           | `array`   |
+| showMoreInfoButton | `true`    |
+| moreInfoButtonTitle|           |
+| customMoreInfoButtonComponent|    | Component
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Events
+| Name                |
+| ------------------  |
+| onSelectPrice       |
+| onClickRoomImage    |
+| onClickPriceMoreInfo|
+| onDatesButtonClick  |
+| onClickFooterButton |
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Styling
+* View `src/index.css` for styling examples.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Examples
+* View `exampleArray.js` and `exampleNested.js` files.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Basic Sample
 
-## Learn More
+```js
+import HotelCard from 'prepared-pages-hotel-booking-component';
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const rooms = [
+    {
+        id: 1,
+        photo: "https://i.imgur.com/ZGnpeai.jpg",
+        title: "Superior Suit Corner",
+        extraInfoComponent: null,
+        features: [
+            {icon: "fa fa-bed", title: "King Bed"},
+            {icon: "fa fa-user", title: "Max 2"},
+            {icon: "fa fa-wifi", title: "Free Wifi"}
+        ],
+        prices: [
+            {
+                id: 1,
+                price: "$200",
+                selected: true,
+                nightCount: 2,
+                moonIcon: "fa fa-moon-o",
+                adultCount: 2,
+                adultIcon: "fa fa-user",
+                childCount: 1,
+                childIcon: "fa fa-child",
+                showAccommodationInfo: true,
+                showMoonIcon: true,
+                showAdultIcon: true,
+                showChildIcon: true,
+                features: [
+                    {icon: "fa fa-info-circle", title: "Non Refundable", bold: false},
+                    {icon: "fa fa-car", title: "Free Parking", bold: true},
+                ],
+                showMoreInfoButton:true,
+                moreInfoButtonTitle: "Availability Calendar",
+                onClickMoreInfoButton: null,
+                customMoreInfoButtonComponent: null
+            },
+            {
+                id: 2,
+                price: "$100",
+                selected: false,
+                nightCount: "for 2 nights",
+                moonIcon: "fa fa-moon-o",
+                adultCount: 2,
+                adultIcon: "fa fa-user",
+                childCount: null,
+                childIcon: "fa fa-child",
+                showAccommodationInfo: true,
+                showMoonIcon: false,
+                showAdultIcon: true,
+                showChildIcon: false,
+                showMoreInfoButton: true,
+                moreInfoButtonTitle: "Availability Calendar",
+                onClickMoreInfoButton: null,
+                customMoreInfoButtonComponent: null,
+                features: [
+                    {icon: "fa fa-info-circle", title: "Free Refundable", bold: true}
+                ],
+            }
+        ]
+    }
+];
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+class App extends React.Component {
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    selectPrice = (hotelId, roomId, priceDetails) => {
 
-### Analyzing the Bundle Size
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    clickImage = (hotelId, roomId, imageDetails) => {
 
-### Making a Progressive Web App
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    onClickPriceMoreInfoButton = (hotelId, roomId, priceDetails) => {
 
-### Advanced Configuration
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    clickDatesButton = () => {
 
-### Deployment
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    clickFooterButton = () => {
 
-### `yarn build` fails to minify
+    }
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    render(){
+        return(
+            <HotelCard
+                hotelName="React Delux Resort Hotel"
+                subTitle="Double family rooms, 2 adults"
+                stars={4}
+                rooms={rooms}
+                footerInfoTitle="Cancellation Policy"
+                footerInfoSubtitle="Until 23 Dec 23:00 GMT 100% Money Back"
+                footerButtonTitle="Complete Booking"
+                checkInDate={new Date()}
+                checkOutDate={new Date(new Date().getTime()+(5*24*60*60*1000))}
+                onSelectPrice={this.selectPrice}
+                onClickRoomImage={this.clickImage}
+                onDatesButtonClick={this.clickDatesButton}
+                onClickFooterButton={this.clickFooterButton}
+                onClickPriceMoreInfo={this.onClickPriceMoreInfoButton}
+            >
+            </HotelCard>
+        )
+    }
+}
+
+```
+
+![screen shot](https://github.com/burakozturk16/prepared-pages-hotel-booking-component/blob/master/ss.png)
+
+
+## Arrays - RoomCard Features
+
+The following declarative structure creates features of a room. There two properties the object needs such as ``icon``
+and ``title``
+
+```js
+import RoomCard from 'prepared-pages-hotel-booking-component';
+
+const features = [
+    {icon: "fa fa-bed", title: "King Bed"},
+    {icon: "fa fa-user", title: "Max 2"},
+    {icon: "fa fa-wifi", title: "Free Wifi"}
+]
+
+class MyComponent extends Component {
+  render() {
+    return (
+      <RoomCard features={features} />
+    )
+  }
+};
+
+```
+
+## Arrays - PriceCard Features
+
+The following declarative structure creates features of a price card. There three properties the object needs such as ``icon``, ``title`` and `bold`
+
+```js
+import PriceCard from 'prepared-pages-hotel-booking-component';
+
+const features = [
+    {icon: "fa fa-info-circle", title: "Non Refundable", bold: false},
+    {icon: "fa fa-car", title: "Free Parking", bold: true}
+]
+
+class MyComponent extends Component {
+  render() {
+    return (
+      <PriceCard features={features} />
+    )
+  }
+};
+
+```
