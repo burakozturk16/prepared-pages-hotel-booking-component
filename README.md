@@ -219,8 +219,7 @@ class App extends React.Component {
                 onDatesButtonClick={this.clickDatesButton}
                 onClickFooterButton={this.clickFooterButton}
                 onClickPriceMoreInfo={this.onClickPriceMoreInfoButton}
-            >
-            </HotelCard>
+            />
         )
     }
 }
