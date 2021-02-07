@@ -231,7 +231,7 @@ class App extends React.Component {
 
 ## Arrays - RoomCard Features
 
-The following declarative structure creates features of a room. There two properties the object needs such as ``icon``
+The following declarative structure creates features of a room. There are two properties the object needs such as ``icon``
 and ``title``
 
 ```js
@@ -255,7 +255,7 @@ class MyComponent extends Component {
 
 ## Arrays - PriceCard Features
 
-The following declarative structure creates features of a price card. There three properties the object needs such as ``icon``, ``title`` and `bold`
+The following declarative structure creates features of a price card. There are three properties the object needs such as ``icon``, ``title`` and `bold`
 
 ```js
 import {PriceCard} from 'prepared-pages-hotel-booking-component/dist';
